@@ -1,6 +1,6 @@
 Name:       curlew
 Version:    0.2.4
-Release:    3%{dist}
+Release:    4%{dist}
 Summary:    Multimedia converter
 License:    Waqf
 URL:        https://github.com/chamfay/Curlew
@@ -22,7 +22,9 @@ Requires:   gtk3
 Requires:   hicolor-icon-theme
 Requires:   mediainfo
 Requires:   python3
+%if 0%{?fedora} < 33
 Requires:   python3-configparser
+%endif
 Requires:   python3-dbus
 Requires:   python3-gobject
 Requires:   xdg-utils
@@ -59,6 +61,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/curlew.desktop
 
 
 %changelog
+* Sun May 24 2020 Leigh Scott <leigh123linux@gmail.com> - 0.2.4-4
+- Fix F33 requires, python3-configparser in part of python3
+
 * Tue Feb 04 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.2.4-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
