@@ -1,6 +1,6 @@
 Name:       curlew
 Version:    0.2.4
-Release:    4%{dist}
+Release:    5%{dist}
 Summary:    Multimedia converter
 License:    Waqf
 URL:        https://github.com/chamfay/Curlew
@@ -61,6 +61,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/curlew.desktop
 
 
 %changelog
+* Sat May 30 2020 Leigh Scott <leigh123linux@gmail.com> - 0.2.4-5
+- Rebuild for python-3.9
+
 * Sun May 24 2020 Leigh Scott <leigh123linux@gmail.com> - 0.2.4-4
 - Fix F33 requires, python3-configparser in part of python3
 
