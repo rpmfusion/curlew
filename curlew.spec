@@ -1,10 +1,11 @@
+%global commit 10aa181c3839a3ec31faea849ed02fac0a5f9d91
 Name:       curlew
-Version:    0.2.4
-Release:    9%{dist}
+Version:    0.2.5
+Release:    1%{?dist}
 Summary:    Multimedia converter
 License:    Waqf
 URL:        https://github.com/chamfay/Curlew
-Source0:    %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
+Source0:    %{url}/archive/%{commit}/%{name}-%{version}.tar.gz
 
 BuildArch:  noarch
 
@@ -35,7 +36,7 @@ Easy to use, Free and Open-Source Multimedia converter for Linux.
 Curlew written in python and GTK3 and it depends on (ffmpeg/avconv).
 
 %prep
-%autosetup -n Curlew-%{version}
+%autosetup -n Curlew-%{commit}
 
 %build
 %{py3_build}
@@ -55,12 +56,18 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/curlew.desktop
 %{_bindir}/curlew
 %{python3_sitelib}/curlew-*-py%{python3_version}.egg-info
 %{_datadir}/applications/curlew.desktop
-%{_datadir}/curlew/
+%dir %{_datadir}/curlew/
+%{_datadir}/curlew/modules
+%{_datadir}/curlew/done.ogg
+%{_datadir}/curlew/formats.cfg
 %{_datadir}/icons/hicolor/*/apps/curlew.*
 %{_datadir}/pixmaps/curlew.svg
 
 
 %changelog
+* Thu Nov 18 2021 Sérgio Basto <sergio@serjux.com> - 0.2.5-1
+- Update curlew to 0.2.5
+
 * Mon Aug 02 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.2.4-9
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
