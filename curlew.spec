@@ -1,7 +1,7 @@
 %global commit 10aa181c3839a3ec31faea849ed02fac0a5f9d91
 Name:       curlew
 Version:    0.2.5
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Multimedia converter
 License:    Waqf
 URL:        https://github.com/chamfay/Curlew
@@ -23,7 +23,7 @@ Requires:   gtk3
 Requires:   hicolor-icon-theme
 Requires:   mediainfo
 Requires:   python3
-%if 0%{?fedora} < 33
+%if 0%{?fedora} && 0%{?fedora} < 33
 Requires:   python3-configparser
 %endif
 Requires:   python3-dbus
@@ -65,6 +65,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/curlew.desktop
 
 
 %changelog
+* Fri Dec 10 2021 Sérgio Basto <sergio@serjux.com> - 0.2.5-2
+- Fix unresolved dep python3-configparser on el7 and 8
+
 * Thu Nov 18 2021 Sérgio Basto <sergio@serjux.com> - 0.2.5-1
 - Update curlew to 0.2.5
 
