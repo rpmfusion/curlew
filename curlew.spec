@@ -6,6 +6,7 @@ Summary:    Multimedia converter
 License:    Waqf
 URL:        https://github.com/chamfay/Curlew
 Source0:    %{url}/archive/%{commit}/%{name}-%{version}.tar.gz
+Patch0:     fix_setuptools.patch
 
 BuildArch:  noarch
 
@@ -36,7 +37,7 @@ Easy to use, Free and Open-Source Multimedia converter for Linux.
 Curlew written in python and GTK3 and it depends on (ffmpeg/avconv).
 
 %prep
-%autosetup -n Curlew-%{commit}
+%autosetup -p1 -n Curlew-%{commit}
 
 %build
 %{py3_build}

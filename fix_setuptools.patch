@@ -1,0 +1,11 @@
+--- a/setup.py
++++ b/setup.py
+@@ -127,7 +127,7 @@ elif sys.argv[1] == 'clean':     clean_a
+ elif sys.argv[1] == 'uninstall': uninstall_all()
+ 
+ 
+-setup(
++setup( packages=[],
+       name="curlew",
+       description='Easy to use multimedia converter in Linux',
+       long_description='''Curlew written in python and GTK3 and it depends on (ffmpeg/avconv).
