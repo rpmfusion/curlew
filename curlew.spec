@@ -1,7 +1,7 @@
 %global commit 10aa181c3839a3ec31faea849ed02fac0a5f9d91
 Name:       curlew
 Version:    0.2.5
-Release:    13%{?dist}
+Release:    14%{?dist}
 Summary:    Multimedia converter
 License:    Waqf
 URL:        https://github.com/chamfay/Curlew
@@ -63,6 +63,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/curlew.desktop
 
 
 %changelog
+* Wed Jun 10 2026 Leigh Scott <leigh123linux@gmail.com> - 0.2.5-14
+- Rebuild for python-3.15
+
 * Mon Feb 02 2026 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 0.2.5-13
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_44_Mass_Rebuild
 
